@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".LightController">
+
+<!-- TODO: Update blank fragment layout -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/device_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Device: Light"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/on_lux"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Turn on light at lux lower than"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@drawable/cursor_color" />
+
+    <EditText
+        android:id="@+id/off_lux"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Turn off light at lux higher than"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@drawable/cursor_color" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/auto_light_sw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="0"
+        android:text="Auto    "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:thumb="@drawable/sw_thumb"
+        app:track="@drawable/sw_track" />
+
+    <!-- Button để lưu cài đặt -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/save_light_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_custom"
+        android:text="Save"
+        android:textSize="16sp"
+        android:textColor="#585761"/>
+</LinearLayout>
+</FrameLayout>

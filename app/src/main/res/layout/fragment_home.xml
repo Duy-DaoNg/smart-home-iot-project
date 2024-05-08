@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment"
+    android:id="@+id/home_fragment_container">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_weight="10"
+            android:background="@drawable/item_background"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:elevation="20dp"
+            android:outlineSpotShadowColor="#A9A9A9"
+            android:outlineAmbientShadowColor="#808080"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="HOME"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bell"
+                    android:layout_gravity="end"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="bottom"
+                    tools:ignore="NestedWeights">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+                        <TextView
+                            android:id="@+id/currentTemperature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#B90E0A"
+                            android:textStyle="bold"
+                            android:text=""
+                            android:textSize="30sp"
+                            android:textAlignment="center"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="°C"
+                            android:textColor="#B90E0A"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textAlignment="center"
+                            android:paddingLeft="5dp"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Temperature"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="bottom">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+                        <TextView
+                            android:id="@+id/currentHumid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#034694"
+                            android:textStyle="bold"
+                            android:textSize="30sp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="%"
+                            android:textColor="#034694"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textAlignment="center"
+                            android:paddingLeft="5dp"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Humidity"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="bottom">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+                        <TextView
+                            android:id="@+id/currentLumi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#FFFF00"
+                            android:textStyle="bold"
+                            android:textSize="30sp"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="l"
+                            android:textColor="#FFFF00"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textAlignment="center"
+                            android:paddingLeft="5dp"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Luminosity"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/light_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/device_shape"
+                    android:orientation="horizontal"
+                    android:elevation="20dp"
+                    android:outlineSpotShadowColor="#A9A9A9"
+                    android:outlineAmbientShadowColor="#808080"
+                >
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/img_light_bulb" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="30dp"
+                            android:text="Light"
+                            android:textColor="#000000"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlSymmetry" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="30dp"
+                            android:text="Living Room"
+                            android:textColor="#bdbdbd"
+                            android:textSize="15sp"
+                            tools:ignore="RtlSymmetry" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="0"
+                        android:theme="@style/Theme.AppCompat.NoActionBar"
+                        android:thumb="@drawable/sw_thumb"
+                        app:track="@drawable/sw_track" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fan_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/device_shape"
+                    android:orientation="horizontal"
+                    android:elevation="20dp"
+                    android:outlineSpotShadowColor="#A9A9A9"
+                    android:outlineAmbientShadowColor="#808080">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/img_fan" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="30dp"
+                            android:text="Fan"
+                            android:textColor="#000000"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlSymmetry" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="30dp"
+                            android:text="Living Room"
+                            android:textColor="#bdbdbd"
+                            android:textSize="15sp"
+                            tools:ignore="RtlSymmetry" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swFan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="0"
+                        android:backgroundTint="#9C27B0"
+                        android:theme="@style/Theme.AppCompat.NoActionBar"
+                        android:thumb="@drawable/sw_thumb"
+                        app:track="@drawable/sw_track" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/device_shape"
+                    android:orientation="horizontal"
+                    android:elevation="20dp"
+                    android:outlineSpotShadowColor="#A9A9A9"
+                    android:outlineAmbientShadowColor="#808080">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/img_tv" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="30dp"
+                            android:text="TV"
+                            android:textColor="#000000"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlSymmetry" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="30dp"
+                            android:text="Living Room"
+                            android:textColor="#bdbdbd"
+                            android:textSize="15sp"
+                            tools:ignore="RtlSymmetry" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="0"
+                        android:theme="@style/Theme.AppCompat.NoActionBar"
+                        android:thumb="@drawable/sw_thumb"
+                        app:track="@drawable/sw_track" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</FrameLayout>
